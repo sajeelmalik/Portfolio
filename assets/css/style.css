@@ -5,27 +5,83 @@
   justify-content: center 
 } */
 
-h1{
-  font-family: 'Oswald', sans-serif;
-}
 
 h2{
   font-family: 'Montserrat', sans-serif;
 }
 
 .landing{
+  margin-top: 15%;
   height: 10em;
   display: flex;
   align-items: center;
-  justify-content: center 
+  justify-content: center;
+  cursor: cell;
+
+  /* position: relative;
+  top:50%; */
+}
+
+.landing h1{
+  width: 50%;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 72px;
+  letter-spacing: 4px;
+  /* font-weight: bold; */
+}
+
+.landing h1::selection {
+  background: #ffe880; /* WebKit/Blink Browsers */
 }
 
 
 .social-buttons{
+  margin: auto;
   display: flex;
+  width: 30%;
   align-items: center;
   justify-content: space-evenly;  
 }
+
+.fa-linkedin, .fa-github, .fa-instagram, .fa-medium{
+  color: rgb(143, 142, 142);
+}
+
+.fa-linkedin:hover {
+  color: rgb(47, 101, 218);
+  transition: .2s ease;
+  font-size: 52px;
+
+}
+
+.fa-github:hover {
+  color: black;
+  transition: .2s ease;
+  font-size: 52px;
+}
+
+/* .fa-instagram:hover {
+  background-color: linear-gradient(to top right, #ff6600 0%, #ff66ff 100%);
+  transition: .2s ease;
+} */
+
+/* add hover gradient to instagram */
+.fa-instagram:hover {
+	background: -webkit-gradient(linear, left bottom, left top, from(#ff6600), to(#ff66ff));
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: .2s ease;
+  font-size: 54px;
+
+}
+
+.fa-medium:hover {
+  color: black;
+  transition: .2s ease;
+  font-size: 52px;
+}
+
 
 /* .centered{
     margin: 0 auto;
@@ -33,3 +89,33 @@ h2{
     line-height: 1.5em;
     padding: 40px 0;
   } */
+
+  /* media queries */
+
+  @media only screen and (max-width: 1024px) {
+    .social-buttons{
+      width: 45%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  .social-buttons{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .landing{
+    margin-bottom: 50px;
+  }
+  .landing h1{
+    width: 60%;
+    font-size: 72px;
+    letter-spacing: 8px;
+    /* font-weight: bold; */
+  }
+  .social-buttons{
+    width: 60%;
+  }
+}
+
