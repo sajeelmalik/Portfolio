@@ -1,3 +1,13 @@
+/* Sajeel Malik
+style.css
+
+Color Theme: 
+#FCE575 (Gold) 
+#ED254E (Magenta)
+#F4FFFD (Light Gray)
+#6C756B (Dark Gray)
+#3943B7 (Blue) */
+
 /* body{
   height: 10em;
   display: flex;
@@ -5,6 +15,26 @@
   justify-content: center 
 } */
 
+.radial-gradient {
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+  z-index: -1;
+  
+  /*Fallback if gradeints don't work */
+  background: #ffe880;
+  /*Linear gradient... */
+  background: 
+    radial-gradient(
+     at center, #f5f5f5, #f8f0cd
+    );
+    /* background: 
+    radial-gradient(
+     at center, rgb(230, 231, 238), rgb(94, 106, 236)
+    ); */
+}
 
 h2{
   font-family: 'Montserrat', sans-serif;
@@ -12,7 +42,7 @@ h2{
 
 .landing{
   margin-top: 15%;
-  height: 10em;
+  height: 5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,18 +53,74 @@ h2{
 }
 
 .landing h1{
-  width: 50%;
+  width: 40%;
   font-family: 'Oswald', sans-serif;
   text-align: center;
   font-size: 72px;
   letter-spacing: 4px;
+  color: rgb(91, 90, 104);
+  transition: 1s ease;
+
   /* font-weight: bold; */
+}
+
+.landing h1:hover{
+  color: rgb(43, 43, 49);
+  text-shadow: 1px 1px 1px rgb(96, 96, 104);
+  /* background-color: #ffe880; */
 }
 
 .landing h1::selection {
   background: #ffe880; /* WebKit/Blink Browsers */
+  text-transform: uppercase;
 }
 
+.name {
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.name::after, .name::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  height: 20px;
+  bottom: -28px;
+  z-index: -1;
+}
+
+.name:hover::after, .name:hover::before {
+  display: block;
+  width: 100%;
+  left: 0;
+  bottom: -28px;
+}
+
+#sajeel::before{
+  -webkit-transition: width 0.6s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: #fce995;
+}
+
+#sajeel::after {
+  /* transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83); */
+  -webkit-transition: width 0.4s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: #ffe880;
+}
+
+#loading {
+  margin: auto;
+  margin-bottom: 15px;
+  width: 25%;
+  height: 20px;
+  background-color: transparent;
+  transition: 0.5s ease;
+}
+/* 
+#golden:hover{
+  background-color:#ffe880;
+} */
 
 .social-buttons{
   margin: auto;
@@ -46,24 +132,27 @@ h2{
 
 .fa-linkedin, .fa-github, .fa-instagram, .fa-medium{
   color: rgb(143, 142, 142);
+  /* text-shadow: 0.5px 0.5px 0.5px rgb(149, 149, 156); */
 }
 
 .fa-linkedin:hover {
   color: rgb(47, 101, 218);
-  transition: .2s ease;
-  font-size: 52px;
+  transition: 0.3s ease;
+  font-size: 54px;
+  text-shadow: 0.5px 0.5px 0.5px rgb(47, 101, 218);
 
 }
 
 .fa-github:hover {
   color: black;
-  transition: .2s ease;
-  font-size: 52px;
+  transition: 0.3s ease;
+  font-size: 54px;
+  text-shadow: 0.5px 0.5px 0.5px black;
 }
 
 /* .fa-instagram:hover {
   background-color: linear-gradient(to top right, #ff6600 0%, #ff66ff 100%);
-  transition: .2s ease;
+  transition: 0.3s ease;
 } */
 
 /* add hover gradient to instagram */
@@ -71,51 +160,55 @@ h2{
 	background: -webkit-gradient(linear, left bottom, left top, from(#ff6600), to(#ff66ff));
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: .2s ease;
-  font-size: 54px;
+  transition: 0.3s ease;
+  font-size: 56px;
+  text-shadow: -webkit-gradient(linear, left bottom, left top, from(#ff6600), to(#ff66ff));
 
 }
 
 .fa-medium:hover {
   color: black;
-  transition: .2s ease;
-  font-size: 52px;
+  transition: 0.3s ease;
+  font-size: 54px;
+  text-shadow: 0.5px 0.5px 0.5px black;
 }
-
-
-/* .centered{
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.5em;
-    padding: 40px 0;
-  } */
 
   /* media queries */
 
-  @media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     .social-buttons{
       width: 45%;
     }
+    #name{
+      width: 50%;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
   .social-buttons{
     width: 60%;
   }
+  #name{
+    width: 65%;
+  }
 }
 
 @media only screen and (max-width: 426px) {
   .landing{
     margin-bottom: 50px;
+    width: 100%;
   }
   .landing h1{
-    width: 60%;
-    font-size: 72px;
+    font-size: 80px;
     letter-spacing: 8px;
     /* font-weight: bold; */
   }
   .social-buttons{
-    width: 60%;
+    width: 80%;
+  }
+  #name{
+    width: 85%;
   }
 }
 
