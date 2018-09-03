@@ -13,40 +13,268 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.12/js/uikit.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.12/js/uikit-icons.min.js"></script>
 
+        <!-- Bootstrap CSS -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-
-
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
-
-        <!-- Anime JS -->
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
-
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada:700|Oswald" rel="stylesheet">
 
         <link rel="stylesheet" href = "assets/css/style.css">
-        <script src = "assets/javascript/script.js"></script>
+     
         
         
     </head>
     <body>
-        <div class="radial-gradient"></div>
-        <div class = "landing">
-            <h1 class = "name" id = "sajeel">Sajeel Malik
-            </h1>
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" id="navbar">
+                <nav class="uk-navbar-transparent uk-animation-slide-top" uk-navbar="dropbar: true;">
+                    <div class="uk-navbar-center">
+                        <div class="uk-navbar-center-left"><div>
+                            <ul class="uk-navbar-nav">
+                                <li><a href="#portfolio   " uk-scroll>Portfolio</a></li>
+                            </ul>
+                        </div></div>
+                        <a class="uk-navbar-item uk-logo" href="#" uk-scroll>Sajeel Malik</a>
+                        <div class="uk-navbar-center-right"><div>
+                            <ul class="uk-navbar-nav">
+                                <li><a href="#" uk-scroll>About Me</a></li>
+                            </ul>
+                        </div></div>
+                    </div>
+                </nav>
+            </div>
+        <div class = "introduction">
+            <div class="radial-gradient"></div>
+            <div class = "title">
+                <h1 class = "name uk-animation-slide-top-medium" id = "sajeel">Sajeel Malik
+                </h1>
+            </div>
+            <div class = "uk-animation-fade bio">
+                <p>Hey, I'm Sajeel! I'm a software engineer.</p>
+            </div>
+            <!-- Placeholder to assess transition area -->
+            <div id = "loading"></div>
+            <!-- <div id = "box-animation"></div> -->
+            
+            <div class = "social-buttons uk-animation-slide-bottom-medium">
+                    <a href = "https://www.linkedin.com/in/sajeel-malik-545a838b/"><p><i class="fab fa-linkedin fa-3x"></i></p></a>
+                    <a href = "https://github.com/sajeelmalik"><p><i class="fab fa-github fa-3x"></i></p></a>
+                    <a href = "https://www.instagram.com/smak23/"><p><i class="fab fa-instagram fa-3x"></i></p></a>
+                    <a href = "https://medium.com/@sajeel23"><p><i class="fab fa-medium fa-3x"></i></p></a>
+            </div>
         </div>
 
-        <!-- Placeholder to assess transition area -->
-        <div id = "loading"></div>
-
-        <div class = "social-buttons centered">
-                <a href = "https://www.linkedin.com/in/sajeel-malik-545a838b/"><p><i class="fab fa-linkedin fa-3x"></i></p></a>
-                 <a href = "https://github.com/sajeelmalik"><p><i class="fab fa-github fa-3x"></i></p></a>
-                 <a href = "https://www.instagram.com/smak23/"><p><i class="fab fa-instagram fa-3x"></i></p></a>
-                <a href = "https://medium.com/@sajeel23"><p><i class="fab fa-medium fa-3x"></i></p></a>
+        
+        <div class = "portfolio" uk-scrollspy="cls:uk-animation-fade" id="portfolio-screen">
+            <div class = "title" >
+                <h1 class = "second-screen uk-animation-slide-top-medium" id = "portfolio">Portfolio
+                </h1>
+            </div>
+            <div class="project" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 1000">
+                <div class="col">
+                    <div class="project-description">
+                        <div class="project-title">Pet Package</div>
+                        <div class="blurb">
+                            Creating families and building homes.
+                        </div>
+                        <a class="uk-button uk-button-default uk-button-large" href="#modal-container" uk-toggle>
+                                View Project
+                        </a>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="grid-img" data="assets/images/Pet Package.png">
+                        <a class="enlarge-image" href="#modal-media-image" uk-toggle><img src="assets/images/Pet Package.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 1000">
+                <div class="col">
+                        <div class="project-description">
+                            <div class="project-title">LIRI Bot</div>
+                            <div class="blurb">
+                                Language Interpretation and Recognition Interface
+                            </div>
+                            <a class="uk-button uk-button-default uk-button-large" href="bi.html">
+                                    View Project
+                            </a>
+                        </div>
+                </div>
+                <div class="col2">
+                    <div class="grid-img" data="assets/images/Liri.PNG">
+                        <a class="enlarge-image" href="#modal-media-image" uk-toggle><img src="assets/images/Liri.PNG"></a>
+                        <img src="assets/images/Liri Spotify.PNG">
+                    </div>
+                </div>
+            </div>
+            <div class="project"></div>
         </div>
+        <!-- Modals -->
+        <div id="modal-media-image" class="uk-flex-top" uk-modal>
+                <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+                    <button class="uk-modal-close-outside" type="button" uk-close></button>
+                    <img id = "image-modal" alt="">
+                </div>
+        </div>
+
+        <div id="modal-container" class="uk-modal-container" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <h1><a id="PetPackage_0"></a>Pet Package</h1>
+<p>Pet Package is an API-driven platform that allows pet-seekers to search and contact local humane societies and adoption clinics by offering geographic references!</p>
+<p>Pet Package is a robust, tool to simplify and inform about the pet adoption process.</p>
+<ul>
+<li>Powered by Javascript, jQuery, Firebase, Petfinder API, and Google Maps API!</li>
+</ul>
+<h2><a id="Motivations_8"></a>Motivations</h2>
+<p>We strive to create a user-friendly product that can help abandoned and in-need animals find homes. Our web app will also help the new owner locate pet-related resources in their area, like vet clinics &amp; pet stores.</p>
+<p>Often, we overlook the needs of animals in our own locales due to our hectic daily lives, especially in noisy, tumultuous cities like San Francisco and New York City. However, with the right tools, many of us would lend a hand to our fellow creatures. Our hope is to provide the connection between animals and future pet-owners to establish a friendly environment for all.</p>
+<h2><a id="Getting_Started_14"></a>Getting Started</h2>
+<p>Follow the deployed project link below to utilize the application.</p>
+<h3><a id="Deployed_Project_Link_18"></a>Deployed Project Link</h3>
+<p><a href="skeeis.github.io/Pet-Package/">Pet Package</a></p>
+<h3><a id="Image_Preview_of_Pet_Package_24"></a>Image Preview of Pet Package</h3>
+<br>
+<a href="skeeis.github.io/Pet-Package/"><img src="https://raw.githubusercontent.com/SkeeIs/Pet-Package/master/img/Preview1.PNG" alt="Pet Package Preview" title="Pet Package"></a></p>
+<h2><a id="Prerequisites_28"></a>Prerequisites</h2>
+<p>The page can be run from any browser, preferably on Google Chrome!</p>
+<h2><a id="Technologies_Used_32"></a>Technologies Used</h2>
+<h3><a id="Web_Technologies_34"></a>Web Technologies</h3>
+<ul>
+<li><strong>HTML5</strong>, <strong>CSS3</strong></li>
+<li><strong>Javascript</strong> - the primary scripting logic enabling our application</li>
+<li><strong>jQuery</strong> - the robust scripting library for Javascript</li>
+<li><a href="https://firebase.google.com/"><strong>Firebase</strong></a> - the online infrastructual database utilized</li>
+</ul>
+<h3><a id="Application_Programming_Interfaces_40"></a>Application Programming Interfaces</h3>
+<ul>
+<li><a href="https://developers.google.com/maps/documentation/javascript/tutorial"><strong>Google Maps API</strong></a> - an customizable API provided by Google to interact with diverse location queries</li>
+<li><a href="https://www.petfinder.com/developers/api-docs"><strong>Petfinder API</strong></a> - an extensive API with an accessible and updated database of over 300,000 adoptable pets and 11,000 animal welfare organizations</li>
+</ul>
+<h3><a id="Design_Technologies_44"></a>Design Technologies</h3>
+<ul>
+<li><a href="https://getuikit.com/"><strong>UIkit</strong></a> - the open-source web styling framework used</li>
+<li><strong>Sketch App</strong> – mockups UI/UX</li>
+<li><strong>Adobe Illustrator</strong> – vector editing</li>
+<li><a href="https://thenounproject.com"><strong>TheNounProject.com</strong></a> – open-source vector database</li>
+<li><strong>CSS Flexbox</strong> – innovative web layouts</li>
+</ul>
+<h1><a id="Applied_Research_51"></a>Applied Research</h1>
+<p>In the United States alone, there are over 1000 searches per hour of users looking for cats and dogs to adopt, according to North America’s largest non-profit pet adoption service. We strive to harness this market and enhance those users’ ability to make informed decisions about potential pet adoption.</p>
+<h1><a id="Innovative_Design_55"></a>Innovative Design</h1>
+<h3><a id="Initial_Mockup__Sketch_App_57"></a>Initial Mockup - Sketch App</h3>
+<p><img src="https://raw.githubusercontent.com/SkeeIs/Pet-Package/master/graphics/Query.png" alt="Pet Package Sketch Mockup" title="Mockup"></p>
+<h1><a id="Code_Snippets_60"></a>Code Snippets</h1>
+
+<p>Here, we queried Petfinder’s API with a jQuery AJAX call and created unique conditional statements to check whether certain pet characteristics existed for each pet. Since Petfinder’s API has different requirements and different outputs for each query, we had to make sure that each parameter existed before we proceeded.</p>
+<p><img src="https://raw.githubusercontent.com/SkeeIs/Pet-Package/master/img/CodeSnip1.PNG" alt="Petfinder Code Snippet" title="Petfinder API"></p>
+<p>Dynamic generation of HTML elements via jQuery is an extremely powerful tool to instantaneously adjust the webpage to the user’s interaction with the interface. Here, we establish a simple, clean iframe in the HTML waiting to be rendered. Without a source, Google Maps doesn’t generate.<br>
+Then, we embed a “data-location” attribute within each pet thumbnail on the page. From there, we push the address <em>on click</em> of the thumbnail to dynamically generate a particular source attribute of a Google Maps iFrame HTML element so that we can query appropriately and populate the location of the animal.</p>
+<p><img src="https://raw.githubusercontent.com/SkeeIs/Pet-Package/master/img/CodeSnip.PNG" alt="Google Maps Code Snippet" title="Google Maps API"></p>
+<p>We also implemented dynamic CSS styling upon creation of new HTML elements.</p>
+<pre><code>$(document).on(&quot;click&quot;, &quot;#hideShow&quot;, function (){
+   hideShow();
+});
+
+$(document).on(&quot;click&quot;, &quot;.animal-pick&quot;, function() {
+    hideShow();
+})
+
+function hideShow() {
+    var toolbar = $(&quot;#toolbarRender&quot;);
+    var searchBar = $(&quot;#picturesRender&quot;);
+    if(!hidden){ 
+        toolbar.css(&quot;top&quot;, &quot;-104px&quot;);
+        searchBar.css(&quot;bottom&quot;, &quot;150px&quot;);
+        $(&quot;#hider&quot;).text(&quot;SHOW&quot;);
+        $(&quot;#hider&quot;).css(&quot;background-color&quot;, &quot;#424874&quot;);
+        $(&quot;#hider&quot;).css(&quot;color&quot;, &quot;white&quot;);
+        hidden = true;
+    }
+    else if(hidden){
+        toolbar.css(&quot;top&quot;, &quot;0px&quot;);
+        searchBar.css(&quot;bottom&quot;, &quot;0px&quot;);
+        $(&quot;#hider&quot;).css(&quot;background-color&quot;, &quot;rgba(255,255,255,.0)&quot;);
+        $(&quot;#hider&quot;).css(&quot;color&quot;, &quot;#424874&quot;);
+        $(&quot;#hider&quot;).text(&quot;HIDE&quot;);
+        hidden = false;
+    }
+}
+
+</code></pre>
+<h1><a id="Learning_Points_108"></a>Learning Points</h1>
+<ul>
+<li>Firebase is extremely useful for long-term cloud storage of user data</li>
+<li><em>Additional Learning Points to Come</em></li>
+</ul>
+<h2><a id="Core_Developers_113"></a>Core Developers</h2>
+<ul>
+<li><strong>Sajeel Malik</strong> - Team Coordination and Google Maps Integration - <a href="https://github.com/sajeelmalik">GitHub</a></li>
+<li><strong>Taylor Skeels</strong> - Petfinder Operations and Firebase Database Management - <a href="https://github.com/skeeis">GitHub</a></li>
+<li><strong>Kevin Macaraeg</strong> - Lead Graphics and Front-End Design - <a href="https://github.com/everysf">GitHub</a></li>
+<li><strong>Syam Kanduri</strong> - Google Maps Integration and Analytics - <a href="https://github.com/syamkanduri1">GitHub</a></li>
+
+</ul>
+<h3><a id="Task_Breakdown_120"></a>Task Breakdown</h3>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th><b>Task</b></th>
+<th><b>Lead</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design, Research, Logic and Execution</td>
+<td>Syam, Sajeel, Taylor, Kevin</td>
+</tr>
+<tr>
+<td><em>Google Maps</em> Success Team</td>
+<td>Syam, Sajeel</td>
+</tr>
+<tr>
+<td><em>Petfinder</em> Operations &amp; Execution</td>
+<td>Taylor</td>
+</tr>
+<tr>
+<td><em>Graphics/Front End</em> Direction</td>
+<td>Kevin</td>
+</tr>
+<tr>
+<td><em>Firebase</em> Management &amp; Logistics</td>
+<td>Taylor</td>
+</tr>
+<tr>
+<td><em>Analytics</em></td>
+<td>Syam</td>
+</tr>
+<tr>
+<td><em>Team Coordinator</em>, Documentation, Git Branching and Project Board Manager</td>
+<td>Sajeel</td>
+</tr>
+</tbody>
+</table>
+<h2><a id="License_132"></a>License</h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE.md">LICENSE.md</a> file for details</p>
+
+            </div>
+        </div>
+
+        <div id = "footer" uk-scrollspy="cls:uk-animation-fade;">
+            <div class = "contact-ani" id = "contact">Contact Me!</div>
+            <div class = "liner uk-divider-icon"></div>
+        </div>
+        <!-- Anime JS -->
+        <script src="assets/anime-master/anime.js" type="text/javascript"></script>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src = "assets/javascript/script.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>   
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
