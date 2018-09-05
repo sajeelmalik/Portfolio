@@ -28,6 +28,14 @@ Color Theme:
   font-family: 'Montserrat Subrayada', sans-serif;
 }
 
+#menu{
+  font-family: "Montserrat", sans-serif;  
+  color: rgb(91, 90, 104);
+  cursor: cell;
+  z-index: 2;
+}
+
+
 
 .introduction{
   position: relative;
@@ -486,3 +494,5 @@ td{
     width: 85%;
   }
 }
+
+

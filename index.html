@@ -28,23 +28,41 @@
         
     </head>
     <body>
-        <!-- <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" id="navbar">
-                <nav class="uk-navbar-transparent uk-animation-slide-top" uk-navbar="dropbar: true;">
-                    <div class="uk-navbar-center">
-                        <div class="uk-navbar-center-left"><div>
-                            <ul class="uk-navbar-nav">
-                                <li><a href="#portfolio   " uk-scroll>Portfolio</a></li>
+        <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-navbar-transparent; cls-inactive: uk-navbar-transparent uk-light; top: 400" id="navbar">
+            <nav class="uk-navbar uk-navbar-container uk-margin .uk-animation-slide-top-medium">
+                <div class="uk-navbar-right">
+                    <a class="uk-navbar-toggle" href="#">
+                        <span class="uk-margin-xlarge-right" id="menu" uk-toggle="target: #offcanvas-nav-primary">Menu</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="uk-offcanvas-content">
+
+            <div id="offcanvas-nav-primary" uk-offcanvas="flip: true; overlay: true">
+                <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            
+                    <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                        <li class="uk-active"><a href="#">SAJEEL MALIK</a></li>
+                        <li class="uk-parent">
+                            <a href="#portfolio">Portfolio</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#pets">Pet Package</a></li>
+                                <li><a href="#liri">LIRI</a></li>
                             </ul>
-                        </div></div>
-                        <a class="uk-navbar-item uk-logo" href="#" uk-scroll>Sajeel Malik</a>
-                        <div class="uk-navbar-center-right"><div>
-                            <ul class="uk-navbar-nav">
-                                <li><a href="#" uk-scroll>About Me</a></li>
-                            </ul>
-                        </div></div>
-                    </div>
-                </nav>
-            </div> -->
+                        </li>
+                        <li>
+                            <a href="#">About Me</a>
+                        </li>
+                        <li class="uk-nav-divider"></li>
+                        <li class="uk-nav-header">Contact</li>
+                        <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: linkedin"></span></a></li>
+                        <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: github"></span></a></li>
+                        <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: instagram"></span> </a></li>
+                    </ul>
+            
+                </div>
+            </div>
         <div class = "introduction">
             <div class="radial-gradient"></div>
             <div class = "title">
@@ -72,7 +90,7 @@
                 <h1 class = "second-screen uk-animation-slide-top-medium" id = "portfolio">Portfolio
                 </h1>
             </div>
-            <div class="project" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 1000">
+            <div class="project" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 1000" id="pets">
                 <div class="col">
                     <div class="project-description">
                         <div class="project-title">Pet Package</div>
@@ -90,7 +108,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 1000">
+            <div class="project" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 1000" id="liri">
                 <div class="col">
                         <div class="project-description">
                             <div class="project-title">LIRI Bot</div>
