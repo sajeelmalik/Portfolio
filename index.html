@@ -44,7 +44,7 @@
             
                     <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
                         <li class="uk-active"><a href="#">SAJEEL MALIK</a></li>
-                        <li class="uk-parent">
+                        <li class="uk-parent nav-category">
                             <a href="#portfolio">Portfolio</a>
                             <ul class="uk-nav-sub">
                                 <li><a href="#pets">Pet Package</a></li>
@@ -52,14 +52,14 @@
                                 <li><a href="#liri">LIRI</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="nav-category">
                             <a href="#">About Me</a>
                         </li>
                         <li class="uk-nav-divider"></li>
                         <li class="uk-nav-header">Contact</li>
-                        <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: linkedin"></span></a></li>
-                        <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: github"></span></a></li>
-                        <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: instagram"></span> </a></li>
+                        <li><a href="#" class = " nav-icons"><span class="uk-margin-small-right" uk-icon="icon: linkedin"></span></a></li>
+                        <li><a href="#" class = " nav-icons"><span class="uk-margin-small-right" uk-icon="icon: github"></span></a></li>
+                        <li><a href="#" class = " nav-icons"><span class="uk-margin-small-right" uk-icon="icon: instagram"></span> </a></li>
                     </ul>
             
                 </div>
@@ -71,7 +71,7 @@
                 </h1>
             </div>
             <div class = "uk-animation-fade bio">
-                <p>Hey, I'm Sajeel! I'm a software engineer with a passion for teaching, research, and medicine. </p>
+                <p>Hey, I'm Sajeel! I'm a software engineer with a passion for teaching, research, and medicine. Read more <a href = "#" id = "about-link">About Me</a>, see my <a href = "#portfolio-screen" id = "portfolio-link" uk-scroll>Portfolio</a>, or <a href = "#footer" id = "contact-link" uk-scroll>Contact Me</a>.</p>
             </div>
             <!-- Placeholder to assess transition area -->
             <div id = "loading"></div>
@@ -122,8 +122,8 @@
                     </div>
                 </div>
                 <div class="col2">
-                    <div class="grid-img" data="assets/images/mealpal.GIF">
-                        <a class="enlarge-image" href="#modal-media-image" uk-toggle><img src="assets/images/mealpal.GIF"></a>
+                    <div class="grid-img" data="assets/images/mealpal.gif">
+                        <a class="enlarge-image" href="#modal-media-image" uk-toggle><img src="./assets/images/mealpal.gif"></a>
                     </div>
                 </div>
             </div>
@@ -140,8 +140,8 @@
                         </div>
                 </div>
                 <div class="col2">
-                    <div class="grid-img" data="assets/images/Liri.GIF">
-                        <a class="enlarge-image" href="#modal-media-image" uk-toggle><img src="assets/images/Liri.GIF"></a>
+                    <div class="grid-img" data="assets/images/Liri.gif">
+                        <a class="enlarge-image" href="#modal-media-image" uk-toggle><img src="./assets/images/Liri.gif"></a>
                         <br><br><p>Liri has been accepted as a Spotify application!</p>
                         <a class="enlarge-image" href="#modal-media-image" uk-toggle><img src="assets/images/Liri Spotify.PNG"></a>
                     </div>
@@ -149,6 +149,7 @@
             </div>
             <div class="project"></div>
         </div>
+
         <!-- Modals -->
         <div id="modal-media-image" class="uk-flex-top" uk-modal>
                 <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">

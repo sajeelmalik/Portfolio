@@ -2,11 +2,16 @@
 style.css
 
 Color Theme: 
-#FCE575 (Gold) 
+#FCE575 (Gold), FFD447 (Darker Gold)
 #ED254E (Magenta)
+#3943B7 (Blue), 000022 (Darker Blue) 
+#A4036F (Purple)
+
+Text:
+#DAFFED Light Blue
 #F4FFFD (Light Gray)
 #6C756B (Dark Gray)
-#3943B7 (Blue) */
+*/
 
 /* body{
   min-height: 100%;
@@ -35,6 +40,31 @@ Color Theme:
   z-index: 2;
 }
 
+.uk-offcanvas-bar{
+  background-color: rgb(11, 18, 94);
+  opacity: 0.95;
+}
+
+.uk-active a{
+  color: #FCE575;
+}
+
+/* .nav-category{
+  color: #FCE575;
+} */
+
+.uk-nav-primary>li>a{
+  transition: 0.1s ease-in-out;
+}
+
+.uk-nav-primary>li>a.nav-icons:hover, .uk-nav-primary>li.nav-category>a:hover{
+  color: #FCE575;
+}
+
+.nav-icons:active{
+  transform: scale(1.2);
+  text-shadow: 2px 2px 4px rgba(250, 228, 118, 0.623);
+}
 
 
 .introduction{
@@ -178,6 +208,18 @@ td{
   transition: 0.3s ease-out;
 } */
 
+#about-link{
+  color: #ED254E;
+}
+
+#portfolio-link{
+  color: #3943B7;
+}
+
+#contact-link{
+  color: rgb(125, 219, 99);
+}
+
 #loading {
   position: relative;
   margin: auto;
@@ -288,10 +330,14 @@ td{
   font-size: 34px;
 }
 
+.uk-button{
+  transition: 0.3s ease-out;  
+}
+
 .uk-button:hover{
   background-color: rgb(57, 67, 183);
   color: white;
-  transition: 0.5s ease-out;  
+  /* transition: 0.5s ease-out;   */
   letter-spacing: 2px;
 }
 
