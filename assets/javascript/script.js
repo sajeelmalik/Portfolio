@@ -4,6 +4,7 @@
 
 $(document).ready(function(){
 
+    //track mouse movement on the   
     $(document).mousemove(function(event) {
         windowWidth = $(window).width();
         windowHeight = $(window).height();
@@ -59,5 +60,24 @@ $(document).ready(function(){
         $("#image-modal").attr("src", $(this).find(':nth-child(1)').attr("src"));
     })
 
+    //Fireworks
+    window.human = false;
+    var centerX = window.innerWidth / 2;
+    var centerY = window.innerHeight / 2;
+
+    function autoClick() {
+    //   if (window.human) return;
+    //   fireworks.animateParticules(
+    //     anime.random(centerX-50, centerX+50), 
+    //     anime.random(centerY-50, centerY+50)
+    //   );
+      anime({duration: 200}).finished.then(autoClick);
+    }
+
+    window.addEventListener('load', function() {
+      fireworks.render.play();
+      autoClick();
+      fireworks.setCanvasSize();
+    }, false);
       
 })
